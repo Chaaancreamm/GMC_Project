@@ -72,6 +72,7 @@ padding-left: 20px;
 
   .menu-icons.close {
     display: none; 
+    
   }
 }
 
@@ -180,6 +181,7 @@ body {
 }
 
 .product {
+  position: relative;
   padding: 20px; 
   height: 100%;
   display: flex;
@@ -187,8 +189,8 @@ body {
 }
 
 .product img {
-  max-width: 100%;
-  height: auto;
+  max-width: 150px;
+  height: 120px;
 }
 
 .product h2 {
@@ -207,7 +209,10 @@ body {
 }
 
 .product button {
-  margin-top: auto; 
+  position: absolute;
+  bottom: 55px; 
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #ff9900;
   color: #fff;
   border: none;
@@ -215,9 +220,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 10px; 
 }
-
 
 .product button:hover {
   background-color: #e68a00;
@@ -252,8 +255,8 @@ body {
   font-size: 40px;
 }
 
-/* Footer */
 
+/* Footer */
 footer {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
@@ -262,7 +265,7 @@ footer {
   text-align: center;
   height: 180px;
   width: 100%; 
-  margin-top: 20px; 
+  margin-top: 0px; 
   position: relative; 
   clear: both;
 }
@@ -299,3 +302,168 @@ footer h3 {
   color: #fff;
 }
 
+
+
+/* Transparent Background */
+
+.transparent-background {
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+  height: 600px; 
+  margin-top: 50px;
+  
+}
+
+.transparent-section {
+  background-color: rgba(255, 255, 255, 0.5); 
+  padding: 50px 0; 
+  margin-bottom: auto;
+}
+
+.transparent-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+/* CONTACT US */
+.container-contact {
+  margin-top: 10px;
+  margin-bottom: 2rem;
+}
+
+.two-columns-grid-contactus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.input-contact {
+  padding: 5px;
+  margin-top: 2rem;
+  border: 2px solid #ccc;
+  border-radius: 1%;
+}
+
+.input-contact:focus {
+  border: 2px solid #ff7417;
+  outline: none;
+}
+
+.form-group-contact {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.message {
+  height: 15rem;
+  width: 70%;
+  resize: none;
+  font-size: 1.8rem;
+  padding: 5px;
+}
+
+.btn-submit {
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 20px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.btn-submit:hover {
+  background-color: white;
+  transition: 0.5s;
+}
+
+
+/* ANIMATIONS */
+
+/* Header Animation */
+header {
+  transition: transform 0.5s ease;
+}
+
+header:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Links */
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff7417;
+}
+
+/* Product Cards */
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Animation */
+.footer {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.footer.fade-in {
+  opacity: 1 !important;
+}
+
+
+
+
+.image-section {
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  text-align: center;
+  color: white;
+  transition: transform 5s ease, opacity 5s ease; 
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(2); 
+  }
+}
+
+.overlay-text.active {
+  opacity: 1; 
+  transform: translate(-50%, -50%) scale(1); 
+}
+
+
+.image-section.animate .overlay-text {
+  animation: fadeIn 1s ease forwards; 
+}
+
+.overlay-text.animate {
+  animation: fadeIn 1s ease forwards; 
+}
