@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
   <!--Our own stylesheet-->
-  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/products.css">
 </head>
 
 <body>
@@ -60,24 +60,88 @@
 </section>
 
   <!--SECTION-->
-  <section class="hero">
-    <div class="container">
-      <div class="main-message">
-        <h1>Chemicals For Sale</h1>
-        <h3>Experienced supplier of quality industrial chemicals and reagents</h3>
-      </div>
-    </div>
-  </section>
 
   <!--Products-->
-  <section class="product-listings" id="products">
+  <main id="product">
     <div class="container">
-      
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima earum eveniet eius? Asperiores ducimus nemo earum, iste eaque ex quia odio a explicabo. Labore magnam nesciunt numquam impedit. Blanditiis, adipisci.</p>
+      <div class="product_wrapper">
+        <div class="product_img">
+          <div class="img_thumbnail">
+            <img src="./assets/images/products/Sodium Cyanide.png" alt="sodium cyanide">
+            <div class="img_small">
+              <img src="./assets/images/products/Sodium Cyanide.png" alt="sodium cyanide">
+              <img src="./assets/images/products/Sodium Cyanide.png" alt="sodium cyanide">
+              <img src="./assets/images/products/Sodium Cyanide.png" alt="sodium cyanide">
+              <img src="./assets/images/products/Sodium Cyanide.png" alt="sodium cyanide">
+            </div>
+          </div>
+        </div>
+        <div class="product_content">
+          <h2 class="product_title">Sodium Cyanide</h2>
+          <p class="company_txt">Manufacturer: XYZ Chemicals</p>
+          <div class="product_desc">
+            <h3>Chemical Appearance</h3>
+            <p>
+              Sodium cyanide is found either in the white crystalline form or in the form of granular powder. It is also water-soluble and forms a clear and colorless aqueous solution.
+            </p>
+            <h3>Chemical Applications and Strengths:</h3>
+            <ul>
+              <li>
+                The most important application of sodium cyanide is evident in the extraction of gold. The use of sodium cyanide is still the best method for mining gold.
+              </li>
+              <li>
+                Sodium cyanide is a common agent in the leaching process for the majority of gold extraction operations.
+              </li>
+              <li>
+                The concerns of safety with sodium cyanide could be addressed effectively by referring to the handling process.
+              </li>
+              <li>
+                Sodium cyanide also finds effective applications in electroplating as well as surface treatment projects.
+              </li>
+              <li>
+                It is also known as a cyanide salt and contains an equal number of sodium cations and cyanide anions.
+              </li>
+            </ul>
+          </div>
+
+          <div class="price">
+            <strong>Price:</strong>
+            <p class="normal_price">PHP 0000.0000</p>
+          </div>
+          <a href="#contacts"><button class="add_to_cart_btn">Inquire?</button></a>
 
 
+          <h2>SPECIFICATION</h2>
+          <br>
+            <div class="table">
+              <div class="table-row table-header">
+                <div class="table-cell">Property</div>
+                <div class="table-cell">Specification</div>
+              </div>
+              <div class="table-row">
+                <div class="table-cell">Chemical Formula</div>
+                <div class="table-cell">NaCN</div>
+              </div>
+              <div class="table-row">
+                <div class="table-cell">Purity</div>
+                <div class="table-cell">98%</div>
+              </div>
+              <div class="table-row">
+                <div class="table-cell">Physical Appearance</div>
+                <div class="table-cell">White Crystalline Solid</div>
+              </div>
+              <div class="table-row">
+                <div class="table-cell">Solubility</div>
+                <div class="table-cell">Soluble in Water</div>
+              </div>
+              <!-- Add more rows for other specifications as needed -->
+            </div>
+
+        </div>
+      </div>
     </div>
-  </section>
+  </main>
+  
   <!--END SECTION-->
 
   <!--Footer-->
@@ -107,17 +171,6 @@
   </footer>
   <!--END SECTION-->
 
-  <script>
-    let popup = document.getElementById("popup");
-
-    function openPopup() {
-      popup.classList.add("open-popup");
-    }
-
-    function closePopup() {
-      popup.classList.remove("close-popup");
-    }
-  </script>
   <script type="text/javascript" src="./assets/js/scripts.js"></script>
 </body>
 </html>
