@@ -135,6 +135,18 @@
   .image-section {
     position: relative; 
   }
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
   
   .overlay-text {
     position: absolute; 
@@ -551,3 +563,187 @@
     font-weight: bold;
     background-color: #f0f0f0; /* Light gray background for header */
   }
+
+
+  .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-img .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product:hover .img-overlay {
+  opacity: 1;
+}
+
+.product-img .img-overlay img {
+  max-width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-details {
+  margin-bottom: 20px;
+  padding-left: 20px; /* Add padding to the left for spacing */
+  border-left: 2px solid #ccc; /* Add a border to visually separate from the image */
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.manufacturer {
+  font-style: italic;
+  color: #666;
+}
+
+
+
+/* Products */
+.product {
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-img {
+  margin-right: 20px;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
+}
+
+.preview-container {
+  width: 300px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.preview-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.preview-image,
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.img_small {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.gallery-image {
+  width: 80px;
+  height: 80px; /* Adjust the height as needed */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.gallery-image:hover {
+  opacity: 0.7;
+}
+
+
+/* Modal */
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed; /* Position the modal relative to the viewport */
+  z-index: 1; /* Set z-index to ensure the modal appears above other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling if content exceeds viewport height */
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+}
+
+/* Modal content */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%; /* Adjust max-width as needed */
+  max-height: 80%; /* Adjust max-height as needed */
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+
+#modal {
+  display: none;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.modal-open {
+  overflow: hidden; /* Prevent scrolling when modal is open */
+}
+
+#modal .modal-content {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-img:hover .preview-image {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+
+.product-img:hover .preview-image {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add shadow effect on hover */
+}
+
+.product-details-container {
+  flex-grow: 1;
+  padding-left: 20px; /* Adjust for spacing */
+  border-left: 1px solid #ccc; /* Visual separation */
+}
+
+.overlay-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
