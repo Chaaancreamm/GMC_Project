@@ -59,6 +59,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+const images = [
+  "./assets/images/products/Sodium Cyanide.png",
+  "./assets/images/products/cyanide_1.jpg",
+  "./assets/images/products/cyanide_2.jpg",
+  "./assets/images/products/cyanide_3.jpg"
+];
 
+let currentIndex = 0;
+const smallImages = document.querySelectorAll('.gallery-image');
+const container = document.querySelector('.img_small');
+const imageWidth = smallImages[0].offsetWidth;
+const numImages = smallImages.length;
 
+function nextImage() {
+  currentIndex = (currentIndex + 1) % numImages;
+  scrollToImage(currentIndex, 'next');
+}
 
+function prevImage() {
+  currentIndex = (currentIndex - 1 + numImages) % numImages;
+  scrollToImage(currentIndex, 'prev');
+}
+
+function scrollToImage(index, direction) {
+  const scrollAmount = index * imageWidth;
+
+  container.scrollTo({
+    left: scrollAmount,
+    behavior: 'smooth'
+  });
+}

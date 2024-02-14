@@ -23,8 +23,8 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav-brand a {
@@ -47,16 +47,13 @@ nav {
 .nav-list {
   display: flex;
   list-style: none;
+  padding: 0;
 }
-
 .nav-item {
   margin-right: 20px;
 }
 
-.nav-link {
-  padding: 8px 15px;
-  line-height: 1;
-}
+
 
 @media screen and (max-width: 768px) {
   .nav-list {
@@ -74,24 +71,43 @@ nav {
 
 .nav-link {
   text-decoration: none;
-  color: #333333;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  border: 2px solid #333333;
-  transition: all 0.3s ease;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 20px;
+  display: block;
+  transition: background-color 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: #333333;
-  color: #ffffff;
+  background-color: #555;
+}
+
+.nav-link i {
+  margin-right: 10px;
 }
 
 .menu-icons {
   display: none;
   cursor: pointer;
+}
+
+.menu-icons .open {
+  display: block;
+}
+
+.menu-icons .close {
+  display: none;
+}
+
+.nav-list.open {
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -290,10 +306,9 @@ footer p {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
+  padding: 0 20px;
 }
 
 .footer-columns {
@@ -621,16 +636,25 @@ header:hover {
   color: #666;
 }
 
+
 /* Products */
 .product {
   display: flex;
   align-items: flex-start;
 }
 
+.product-gallery button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 5px;
+  outline: none;
+}
+
 .product-img {
-  margin-right: 20px;
-  width: 300px;
-  height: 300px;
+  width: 300px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
   overflow: hidden;
   position: relative;
   cursor: pointer; /* Add cursor pointer to indicate clickable */
@@ -640,6 +664,7 @@ header:hover {
   width: 300px; /* Adjust the width as needed */
   height: 300px; /* Adjust the height as needed */
   overflow: hidden;
+  margin-bottom: 20px
 }
 
 .preview-image {
@@ -657,27 +682,67 @@ header:hover {
   max-width: 100%;
   max-height: 100%;
   border: 5px solid #ccc;
-  
+}
+
+.product-gallery {
+  position: relative;
+  height: 100px; /* Adjust the height as needed */
+  width: 300px; /* Adjust the width as needed */
+  white-space: nowrap; /* Ensure images stay on the same line */
+  display: flex;
+  justify-content: space-between; /* Align items with space between them */
+  align-items: center; /* Align items vertically */
+  z-index: 1; /* Ensure the container doesn't cover the buttons */
+  margin-top: 40px;
+ 
 }
 
 .img_small {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  flex-direction: column;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Align items vertically */
+  position: relative;
+  border: 5px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  min-width: 240px; /* Adjust as needed */
+  overflow-x: hidden;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Add smoother transition */
 }
 
 .gallery-image {
-  width: 100px;
-  height: 100px;
+  width: auto;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
   margin-right: 10px;
-  margin-top: 10px;
   cursor: pointer;
   background-size: cover;
   background-position: center;
   transition: opacity 0.3s ease;
+  flex-shrink: 0;
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+
+.prev,
+.next {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000;
+  position: absolute; /* Position the buttons absolutely */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000; /* Ensure buttons are on top */
+}
+
+.prev {
+  left: 10px; /* Adjust the left position as needed */
+}
+
+.next {
+  right: 10px; /* Adjust the right position as needed */
 }
 
 .gallery-image:hover {
@@ -742,6 +807,8 @@ header:hover {
   flex-grow: 1;
   padding-left: 20px; /* Adjust for spacing */
   border-left: 1px solid #ccc; /* Visual separation */
+
+  
 }
 
 .overlay-text p {

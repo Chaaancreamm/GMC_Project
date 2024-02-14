@@ -2,21 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>G.M.C Trading | Home</title>
-
-  <!--Ion Icons-->
-  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <!--Google Fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
-  <!--Our own stylesheet-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-
 <body>
-  <!--HEADER-->
   <header>
     <div class="container">
       <nav>
@@ -26,15 +17,13 @@
             <h1>G.M.C Trading</h1>
           </a>
         </div>
-        <div class="menu-icons open">
-          <i class="icon ion-md-menu"></i>
+        <div class="menu-icons">
+          <i class="icon ion-md-menu open"></i>
+          <i class="icon ion-md-close close"></i>
         </div>
         <ul class="nav-list">
-          <div class="menu-icons close">
-            <i class="icon ion-md-close"></i>
-          </div>
           <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
+            <a href="index.html" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
             <a href="#About Us" class="nav-link">About Us</a>
@@ -49,8 +38,7 @@
       </nav>
     </div>
   </header>
-  <!--END HEADER-->
-
+  
   <section class="image-section" id="about">
     <div class="image-container">
       <img src="./assets/images/Head.jpg" alt="kenon">
@@ -61,39 +49,39 @@
     </div>
   </section>
   
-  <!--SECTION-->
-  <section class="hero">
-    <div class="container">
-      <div class="main-message">
-        <h1>Chemicals For Sale</h1>
-        <h3>Experienced supplier of quality industrial chemicals and reagents</h3>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="main-message">
+      <h1>Explore Our Chemicals</h1>
+      <p class="sub-message">Your trusted source for quality industrial chemicals and reagents</p>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="product-listings" id="products">
+  <div class="container">
+    <div class="product-card">
+      <div class="product">
+        <img src="./assets/images/products/Sodium Cyanide.png" alt="Product 1">
+        <h2>Sodium Cyanide</h2>
+        <p>Sodium cyanide is found either in the white crystalline form or in the form of granular powder. It is also water-soluble and forms a clear and colorless aqueous solution.</p>
+        <a href="product_page1.html" class="btn">View</a>
       </div>
     </div>
-  </section>
 
-  <!--Products-->
-  <section class="product-listings" id="products">
-    <div class="container">
-      <div class="product-card">
-        <div class="product">
-          <img src="./assets/images/products/Sodium Cyanide.png" alt="Product 1">
-          <h2>Sodium Cyanide</h2>
-          <p>Sodium cyanide is found either in the white crystalline form or in the form of granular powder. It is also water-soluble and forms a clear and colorless aqueous solution.</p>
-          <a href="product_page1.html"><button class="btn">View</button></a>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product">
-          <img src="./assets/images/products/Activated carbon.png" alt="Product 2">
-          <h2>Activated Carbon</h2>
-          <p>Activated Carbon is the general name assigned for a group of porous carbons. The appearance of activated Carbon depends considerably on the process used for the activation of Carbon. The product is typically charcoal black with varying mesh sizes.</p>
-          <a href="product_page2.html"><button class="btn">View</button></a>
-        </div>
+    <div class="product-card">
+      <div class="product">
+        <img src="./assets/images/products/Activated carbon.png" alt="Product 2">
+        <h2>Activated Carbon</h2>
+        <p>Activated Carbon is the general name assigned for a group of porous carbons. The appearance of activated Carbon depends considerably on the process used for the activation of Carbon. The product is typically charcoal black with varying mesh sizes.</p>
+        <a href="product_page2.html" class="btn">View</a>
       </div>
     </div>
-  </section>
-  <!--END SECTION-->
+  </div>
+</section>
+
 
   <!--About Us-->
   <div class="transparent-background" id="About Us">
@@ -125,9 +113,8 @@
     </div>
   </div>
 </div>
-
-  
   <!--END SECTION-->
+
 
   <!--Contact Us-->
   <section class="contact" id="contactus">
