@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.querySelector('.overlay-text').classList.add('active', 'animate'); // Add 'animate' class
+          entry.target.querySelector('.overlay-text').classList.add('active', 'animate'); 
         } else {
-          entry.target.querySelector('.overlay-text').classList.remove('active', 'animate'); // Remove 'active' and 'animate' classes when out of view
+          entry.target.querySelector('.overlay-text').classList.remove('active', 'animate'); 
         }
       });
     }, {

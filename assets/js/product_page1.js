@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // When the user clicks on the preview image, open the modal
   previewImage.addEventListener('click', function() {
-    modal.style.display = 'flex'; // Display the modal as flexbox
-    modal.classList.add('modal-open'); // Add class to apply styles for open modal
-    enlargedImage.src = this.src; // Set the source of the enlarged image
+    modal.style.display = 'flex'; 
+    modal.classList.add('modal-open'); 
+    enlargedImage.src = this.src; 
 
     // Disable body scrolling
     document.body.style.overflow = 'hidden';
@@ -42,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function closeModal() {
-    modal.style.display = 'none'; // Close the modal
-    modal.classList.remove('modal-open'); // Remove class for open modal
-    enlargedImage.src = ''; // Reset the enlarged image src
+    modal.style.display = 'none'; 
+    modal.classList.remove('modal-open'); 
+    enlargedImage.src = '';
 
     // Enable body scrolling
     document.body.style.overflow = 'auto';
