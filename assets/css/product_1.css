@@ -206,6 +206,11 @@ body {
   padding: 20px;
   height: 100%;
   display: flex;
+  flex-direction: column;
+}
+
+.product-images{
+  display: flex;
   flex-direction: row;
 }
 
