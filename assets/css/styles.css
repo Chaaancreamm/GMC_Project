@@ -17,7 +17,6 @@ header {
 }
 
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -118,6 +117,7 @@ padding-left: 20px;
 }
 
 body {
+  width: 100%;
   background-color: #faf3e0; 
   color: #8b6f43; 
   margin: 0;
@@ -142,7 +142,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .image-section img {
-    max-width: 80%; 
+    max-width: 100%; 
   }
 }
 
@@ -330,7 +330,7 @@ body {
 
 /* Footer */
 footer {
-  background-color: #0A131D;
+  background-color: #333;
   color: #fff;
   padding: 50px 0;
   text-align: center;
@@ -483,10 +483,7 @@ footer {
   margin-bottom: 50px; 
 }
 
-.two-columns-grid-contactus {
-  display: grid;
-  grid-template-columns: 1fr; 
-}
+
 
 .input-contact {
   padding: 15px; 
@@ -537,10 +534,13 @@ footer {
   color: #ff7417;
 }
 
+
+
 .section-title {
   font-size: 36px; 
   color: #333; 
   margin-bottom: 20px; 
+  
 }
 
 .section-subtitle {
@@ -612,4 +612,39 @@ header:hover {
 
 .overlay-text.animate {
   animation: fadeIn 1s ease forwards; 
+}
+
+form{
+  width: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1260) {
+  input{
+    width: 80%;
+    margin-right: 500px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .overlay-text h1{
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .overlay-text h1{
+    font-size: 30px;
+  }
+
+  .image-container {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 630){
+  .section-title {
+    margin-top: 70%;
+  }
 }
