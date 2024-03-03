@@ -48,10 +48,13 @@ nav {
   display: flex;
   list-style: none;
   padding: 0;
+  color: #fff;
 }
 .nav-item {
   margin-right: 20px;
+  color: #fff;
 }
+
 
 
 
@@ -128,7 +131,7 @@ body {
 }
 
 .nav-link {
-  color: #8b6f43;
+  color: #ffffff;
 }
 
 .image-section img {
@@ -823,4 +826,76 @@ header:hover {
   padding-left: 20px; 
   border-left: 1px solid #ccc; 
   margin-top: -35%; 
+}
+
+/* CONTACT US */
+.container-contact {
+  margin-top: 50px; 
+  margin-bottom: 50px; 
+}
+
+.two-columns-grid-contactus {
+  display: grid;
+  grid-template-columns: 1fr; 
+}
+
+.input-contact {
+  padding: 15px; 
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  border: none; 
+  border-bottom: 2px solid #ff7417; 
+  background-color: transparent; 
+  width: 100%; 
+  color: #333; 
+  transition: border-bottom 0.3s; 
+}
+
+.input-contact:focus {
+  border-bottom-color: #ff7417; 
+}
+
+.message {
+  height: 200px; 
+  width: 100%;
+  resize: none; 
+  font-size: 16px; 
+  padding: 15px; 
+  border: none; 
+  border-bottom: 2px solid #ff7417; 
+  background-color: transparent; 
+  color: #333; 
+  transition: border-bottom 0.3s; 
+}
+
+.message:focus {
+  border-bottom-color: #ff7417; 
+}
+
+.btn-submit {
+  font-size: 1.6rem; 
+  padding: 15px 30px; 
+  background-color: #ff7417; 
+  color: #fff;
+  border: none; 
+  border-radius: 50px; 
+  cursor: pointer; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.btn-submit:hover {
+  background-color: #fff; 
+  color: #ff7417;
+}
+
+.section-title {
+  font-size: 36px; 
+  color: #333; 
+  margin-bottom: 20px; 
+}
+
+.section-subtitle {
+  font-size: 20px; 
+  color: #666; 
+  margin-bottom: 30px; 
 }
