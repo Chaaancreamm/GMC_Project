@@ -370,6 +370,7 @@ footer h3 {
 
 .input-contact {
   padding: 5px;
+  
   margin-top: 2rem;
   border: 2px solid #ccc;
   border-radius: 1%;
@@ -388,7 +389,7 @@ footer h3 {
 
 .message {
   height: 15rem;
-  width: 70%;
+  width: 95%;
   resize: none;
   font-size: 1.8rem;
   padding: 5px;
