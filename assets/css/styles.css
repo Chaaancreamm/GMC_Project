@@ -401,17 +401,13 @@ footer {
   opacity: 1 !important;
 }
 
-
-
-
-
 /* About Us */
 
 .transparent-background {
   background-image: url('../images/background.jpg');
   background-size: cover;
   background-attachment: fixed; 
-  height: 600px; 
+  height: 600%; 
   margin-top: 50px;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 50px 0;
@@ -420,6 +416,7 @@ footer {
 .transparent-section {
   background-color: rgba(255, 255, 255, 0.7); 
   padding: 50px 0; 
+  height: 100%;
 }
 
 .transparent-content {
@@ -646,5 +643,106 @@ form{
 @media screen and (max-width: 630){
   .section-title {
     margin-top: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none; 
+  }
+
+  .menu-icons.open {
+    display: block;
+  }
+
+  .menu-icons.close {
+    display: none;
+  }
+}
+
+  #nav-links.open {
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+
+/* Adjust font sizes and paddings for smaller screens */
+@media screen and (max-width: 480px) {
+  .nav-brand h1 {
+    font-size: 1.2rem;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  .overlay-text h1 {
+    font-size: 30px;
+  }
+
+  .image-section img {
+    max-height: 40vh;
+  }
+
+  .main-message h1 {
+    font-size: 36px;
+  }
+
+  .main-message .sub-message {
+    font-size: 18px;
+  }
+
+  .product-card h2 {
+    font-size: 18px;
+  }
+
+  .product-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .btn-submit {
+    font-size: 1.4rem;
+    padding: 12px 24px;
+  }
+
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .benefit h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .benefit p {
+    font-size: 14px;
+  }
+}
+
+/* Adjust image container for smaller screens */
+@media screen and (max-width: 630px){
+  .section-title {
+    margin-top: 70%;
+  }
+
+  .image-container {
+    width: 100%;
+    object-fit: cover;
   }
 }
