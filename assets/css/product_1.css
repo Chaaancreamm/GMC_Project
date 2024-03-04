@@ -415,14 +415,6 @@ footer h3 {
 
 /* ANIMATIONS */
 
-/* Header Animation */
-header {
-  transition: transform 0.5s ease;
-}
-
-header:hover {
-  transform: scale(1.05);
-}
 
 /* Navigation Links */
 .nav-link {
