@@ -342,6 +342,7 @@ footer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .footer-column {
@@ -489,7 +490,7 @@ footer {
   border: none; 
   border-bottom: 2px solid #ff7417; 
   background-color: transparent; 
-  width: 100%; 
+  width: 95%; 
   color: #333; 
   transition: border-bottom 0.3s; 
 }
@@ -500,7 +501,7 @@ footer {
 
 .message {
   height: 200px; 
-  width: 100%;
+  width: 95%;
   resize: none; 
   font-size: 16px; 
   padding: 15px; 
@@ -640,12 +641,6 @@ form{
   }
 }
 
-@media screen and (max-width: 630){
-  .section-title {
-    margin-top: 70%;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .nav-list {
     display: none; 
@@ -659,6 +654,24 @@ form{
     display: none;
   }
 }
+
+@media screen and (max-width: 630px){
+  .section-title {
+    margin-top: 70%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .overlay-text h1{
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .overlay-text p{
+    font-size: 10px;
+  }
+}
+
+
 
   #nav-links.open {
     display: flex;
@@ -685,9 +698,6 @@ form{
     padding: 10px 15px;
   }
 
-  .overlay-text h1 {
-    font-size: 30px;
-  }
 
   .image-section img {
     max-height: 40vh;
