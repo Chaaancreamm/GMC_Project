@@ -1,20 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // Toggle menu icons
-  const openMenuIcon = document.querySelector('.menu-icons.open');
-  if (openMenuIcon) {
-    openMenuIcon.addEventListener('click', function() {
-      document.querySelector('.menu-icons.open').style.display = 'none';
-      document.querySelector('.menu-icons.close').style.display = 'block';
-    });
-  }
+// Get the menu icon and navigation list elements
+const menuIcon = document.querySelector('.menu-icons');
+const navList = document.getElementById('navList');
 
-  const closeMenuIcon = document.querySelector('.menu-icons.close');
-  if (closeMenuIcon) {
-    closeMenuIcon.addEventListener('click', function() {
-      document.querySelector('.menu-icons.close').style.display = 'none';
-      document.querySelector('.menu-icons.open').style.display = 'block';
-    });
-  }
+// Add event listener to the menu icon for toggling navigation list visibility
+menuIcon.addEventListener('click', function() {
+  navList.classList.toggle('show');
+});
+
+
+
 
   // Add class to footer on DOMContentLoaded
   const footer = document.querySelector("footer");
@@ -39,4 +33,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
     observer.observe(aboutSection);
   }
-});
+

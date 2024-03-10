@@ -765,3 +765,13 @@ form{
     object-fit: cover;
   }
 }
+
+
+.menu-icons:hover {
+  cursor: pointer;
+}
+
+.nav-list.show {
+  display: block;
+}
+
