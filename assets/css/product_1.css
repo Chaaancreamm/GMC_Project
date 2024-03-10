@@ -980,3 +980,27 @@ footer h3 {
     height: 100%;
   }
 }
+
+
+.menu-icons:hover {
+  cursor: pointer;
+}
+
+.nav-list.show {
+  display: block;
+}
+
+
+
+/* Adjust image container for smaller screens */
+@media screen and (max-width: 630px){
+  .section-title {
+    margin-top: 70%;
+  }
+
+  .image-container {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+

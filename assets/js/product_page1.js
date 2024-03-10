@@ -90,3 +90,12 @@ function scrollToImage(index, direction) {
     behavior: 'smooth'
   });
 }
+
+// Get the menu icon and navigation list elements
+const menuIcon = document.querySelector('.menu-icons');
+const navList = document.getElementById('navList');
+
+// Add event listener to the menu icon for toggling navigation list visibility
+menuIcon.addEventListener('click', function() {
+  navList.classList.toggle('show');
+});
